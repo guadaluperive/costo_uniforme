@@ -1,0 +1,21 @@
+<!-- templates/resultado.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado de Búsqueda</title>
+</head>
+<body>
+    <h1>Camino Encontrado</h1>
+    {% if camino %}
+        <ul>
+            {% for nodo in camino %}
+                <li>{{ nodo }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontró camino a HIDALGO.</p>
+    {% endif %}
+    <a href="/">Regresar al Inicio</a>
+</body>
+</html>
